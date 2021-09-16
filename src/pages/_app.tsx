@@ -6,8 +6,8 @@ import Header from '../../components/Header';
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     return (
         <PrimaryWrapper>
-            <GlobalStyle />
             <Header />
+            <GlobalStyle />
             <Component {...pageProps} />
         </PrimaryWrapper>
     );
