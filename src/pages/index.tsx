@@ -2,6 +2,7 @@ import axios from 'axios';
 import { FC, useEffect, useState } from 'react';
 import FilmePrincipal from '../../components/filme-principal';
 import Carousel from '../../components/carousel-filmes';
+import { WrapperFilmes } from '../styles/wrapper-films/styles';
 
 const url = process.env.NEXT_PUBLIC_ENV_API_URL;
 const key = process.env.NEXT_PUBLIC_ENV_API_KEY;
@@ -21,10 +22,10 @@ const Home: FC<Props> = ({ dados }) => {
     }, [Dados]);
     if (Dados !== '') {
         return (
-            <>
+            <WrapperFilmes>
                 <FilmePrincipal Dados={Dados.results[0]} />
                 <Carousel Dados={Dados.results} />
-            </>
+            </WrapperFilmes>
         );
     } else {
         return <div>carregando ...</div>;

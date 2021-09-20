@@ -7,5 +7,6 @@ export const Wrapper = styled.div`
         background-color: #141414;
         font-family: 'Arial', Times, serif;
         color: white;
+        overflow: hidden;
     `}
 `;
