@@ -1,9 +1,5 @@
 import styled, { css } from 'styled-components';
 
-interface Container {
-    Quantidade: Array<number>;
-}
-
 export const Container = styled.div`
     ${() => css`
         display: flex;
@@ -14,6 +10,22 @@ export const Container = styled.div`
         margin-right: 2%;
         padding-top: 2%;
         justify-content: center;
+        @media (max-width: 800px) {
+            width: 95%;
+            height: 28%;
+        }
+        @media (max-width: 768px) {
+            width: 95%;
+            height: 35%;
+        }
+        @media (max-width: 414px) {
+            width: 95%;
+            height: 25%;
+        }
+        @media (max-width: 375px) {
+            width: 95%;
+            height: 20%;
+        }
     `}
 `;
 
@@ -31,6 +43,7 @@ export const ContainerCarousel = styled.div`
         margin-right: 2%;
         padding-top: 2%;
         width: 100%;
+        height: 90%;
         display: flex;
         flex-direction: row;
     `}

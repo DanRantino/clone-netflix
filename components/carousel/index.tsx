@@ -5,7 +5,7 @@ import { FilmesData } from '../../@types/FilmesData';
 type Props = {
     dados: FilmesData;
     index: number;
-    state: any;
+    state: never;
     display: string;
     mov: string;
 };
@@ -25,9 +25,7 @@ const CompCarousel: React.FC<Props> = ({
             url={dados.poster_path}
             Quantidade={display}
             mov={mov}
-        >
-            {index}
-        </DivPoster>
+        />
     );
 };
 export default memo(CompCarousel);
